@@ -28,8 +28,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "quize.apps.QuizeConfig",
-    "core.apps.CoreConfig",
-    "quickstart.apps.QuickstartConfig"
+    "core.apps.CoreConfig"
 ]
 
 MIDDLEWARE = [
