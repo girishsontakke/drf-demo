@@ -1,10 +1,3 @@
-from django.shortcuts import render
-from django.http import JsonResponse
-
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
 from rest_framework import generics, mixins
 
 from core.serializers import PostSerializer
@@ -22,6 +15,14 @@ class PostView(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericA
     def post(self, request):
         return self.create(request)
 
+
+# from django.shortcuts import render
+# from django.http import JsonResponse
+#
+# from rest_framework.response import Response
+# from rest_framework.views import APIView
+# from rest_framework import status
+# from rest_framework.permissions import IsAuthenticated
 
 # class PostView(generics.ListAPIView, generics.CreateAPIView):
 #     queryset = Post.objects.all()
