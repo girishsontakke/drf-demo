@@ -1,5 +1,4 @@
 from rest_framework import generics, mixins
-
 from core.serializers import PostSerializer
 from core.models import Post
 
