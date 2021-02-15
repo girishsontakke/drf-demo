@@ -8,6 +8,6 @@ User = get_user_model()
 
 @receiver(post_save, sender=User)
 def auth_toke_create(sender, instance, created, *args, **kwargs):
-    if not created:
+    if created:
         token = Token.objects.create(user=instance)
         token.save()
